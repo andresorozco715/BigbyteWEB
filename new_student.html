@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Student - BigByte Incorporated</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <a href="index.html"><li class="tab">Home</li></a>
+    </ul>
+    <h1>New Student Registration</h1>
+
+    <form action="process-form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Surname:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="" disabled selected>Select a course</option>
+            <option value="Artificial Intelligence">Artificial Intelligence</option>
+            <option value="Cloud Computing">Cloud Computing</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Data Science">Data Science</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Network Security">Network Security</option>
+            <option value="Software Applications">Software Applications</option>
+        </select>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password (Minimum 8 characters, at least one letter, one number, and one special character):</label>
+        <input type="password" id="password" name="password" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <label for="credit-card">Credit Card:</label>
+        <input type="text" id="credit-card" name="credit-card" placeholder="Enter credit card number" required>
+
+        <label for="expiry-date">Expiry Date:</label>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YYYY" required>
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
